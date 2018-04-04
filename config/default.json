@@ -1,0 +1,43 @@
+{
+    "db": {
+        "username": "root",
+        "password": "root",
+        "database": "dbname",
+        "host": "localhost",
+        "port": "3306",
+        "dialect": "mysql"
+    },
+    "auth": {
+        "secret": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9",
+        "tokenPeriod": "1440h"
+    },
+    "webServer": {
+        "url": "http://demo.com",
+        "adminEmail": "admin@demo.com",
+        "baseUrl": "http://demo.com",
+        "port": "5000"
+    },
+    "logger": {
+        "console": {
+            "level": "silly",
+            "handleExceptions": true,
+            "json": false,
+            "colorize": true
+        }
+    },
+    "queueServer": {
+        "disabled": false,
+        "name": "offline",
+        "port": 6379,
+        "host": "127.0.0.1",
+        "ns": "offline",
+        "timeout": "30 * 60 * 1000",
+        "processors": {
+            "dir": "processors",
+            "default": {
+                "dir": "defaults",
+                "file": "default.js"
+            }
+        }
+    }
+}
